@@ -1,0 +1,10 @@
+# Steps taken to build this project 
+1. creates a new repository on github "Predicting -Ames-house-prices"(https://github.com/HimanshuChoudhary3004/Predicting-Ames-house-prices.git)
+2. created a new folder on pc and opened that folder in VS code 
+3. cloned github "Predicting -Ames-house-prices"repository to local folder using (git clone https://github.com/HimanshuChoudhary3004/Predicting-Ames-house-prices.git)
+4. updated Readme.md file about the aim of project and workflow of project and pushed the same to remote repository by satging and committing 
+5. selected python 3.11.5 as interpreter
+6. created a new virtual environment in our project folder (python -m venv venv)
+7. activated venv (python\script\activate)
+8. Installing primary libraries like numpy pandas matplotlib seaborn(pip install numpy pandas matplotlib seaborn)
+8. setting up requirement.txt file(pip freeze> requirement.txt) this will create a txt file wich will contain the name of all installed packages 
