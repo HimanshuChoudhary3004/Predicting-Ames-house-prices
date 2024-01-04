@@ -1,11 +1,12 @@
 from setuptools import find_packages, setup
-from requirements import parse
+from setuptools.command.install import install
+from setuptools import setup, find_packages
+from pip._internal.req import parse_requirements
 
-def get_requirements(file_path: str) -> list:
-    '''This function returns the list of packages to be installed'''
-    with open(file_path) as f:
-        req = parse(f)
-        return [str(package.req) for package in req]
+# Function to parse requirements.txt file
+def parse_requirements_file():
+    reqs = parse_requirements('requirements.txt', session=False)
+    return [str(ir.requirement) for ir in reqs]
 
 setup(
     name="Ames House price prediction",
@@ -13,7 +14,8 @@ setup(
     author="Himanshu Choudhary",
     author_email="Hchoudhary525@gmail.com",
     packages=find_packages(),
-    install_requires=get_requirements('requirements.txt')
+    install_requires=parse_requirements_file()
 )
+
 
 
